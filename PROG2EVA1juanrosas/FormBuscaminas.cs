@@ -61,6 +61,8 @@ namespace PROG2EVA1juanrosas
             
 
         }
+
+        // se crea lista para guardas todas las acciones
         List<CLASEEVALUA2juanRosas> LISTAEVALUA2 = new List<CLASEEVALUA2juanRosas>();
         public void crearMatriz(int d, int m)
         {       
@@ -187,17 +189,21 @@ namespace PROG2EVA1juanrosas
             
             LISTAEVALUA2.Add(new CLASEEVALUA2juanRosas(rut, inicio, DateTime.Now,"Cierre de Session",DateTime.Now));
 
-            StreamWriter sw = new StreamWriter(@"C:\TXTS\VIGIAJUANROSAS.TXT");
+            //se crea el objeto sw que instancia la clase StreamWriter para crear el archivo txt.
+            StreamWriter sw = new StreamWriter(@"C:\TXTS\VIGIAJUANROSAS.TXT", true);
             
             foreach (CLASEEVALUA2juanRosas item in LISTAEVALUA2)
             {
+                //se crean variables para almacenar los string que devulve cada metodo del objeto tipo lista.
                 string rutTxt = item.getRut();
                 string inicioSesionTxt = item.getInicioSesion();
                 string finSesionTxt = item.getFinSesion();
                 string accionTxt = item.getAccion();
                 string accionFTxt = item.getAccionF();
 
+                //se crea una variable linea que almacena los datos de las variables en cada ciclo del bucle.
                 string linea = $"{rutTxt}, {inicioSesionTxt}, {finSesionTxt}, {accionTxt}, {accionFTxt};";
+                //se agrega el string de la variable linea al objeto sw con el metodo WriteLine()
                 sw.WriteLine(linea);
             }
             sw.Close();

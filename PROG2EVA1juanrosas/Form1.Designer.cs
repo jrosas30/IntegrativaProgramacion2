@@ -132,7 +132,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 231);
+            this.label4.Location = new System.Drawing.Point(18, 234);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 9;
@@ -141,7 +141,7 @@
             // lblRes
             // 
             this.lblRes.AutoSize = true;
-            this.lblRes.Location = new System.Drawing.Point(18, 231);
+            this.lblRes.Location = new System.Drawing.Point(18, 261);
             this.lblRes.Name = "lblRes";
             this.lblRes.Size = new System.Drawing.Size(0, 13);
             this.lblRes.TabIndex = 10;

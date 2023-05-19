@@ -20,12 +20,5 @@ namespace PROG2EVA1juanrosas
             label1.Text = texto;
         }
 
-        
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }

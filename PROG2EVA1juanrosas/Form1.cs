@@ -84,20 +84,28 @@ namespace PROG2EVA1juanrosas
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
+            // se crea el objeto sr que instancia la clase StreamReader, par leer el archivo de texto.
             StreamReader sr = new StreamReader(@"C:\TXTS\VIGIAJUANROSAS.TXT");
             string lectura;
             string[] r;
             string texto;
+            //se utiliza el metodo ReadToEnd() de la Clase StreamReader, para realizar la lectura de todo el documento sin tener que utilizar un bucle.
             lectura = sr.ReadToEnd();
+            //se utiliza metodo split() para separar el texto y guardarlo en el array "r".
             r = lectura.Split(';');
             texto = "";
+
+            //se crea un blucle para recorrer el array "r" y se guarda su contenido en una variable llamada "texto".
             for (int i = 0; i < r.Length; i++)
             {
                 texto += $"{r[i]} \n";
             }
 
+            //los datos almacenados en el variable "texto" se envian como argumento del constructor del formulario llamado VerDatos.
             VerDatos verDatos = new VerDatos(texto);
+            //se muestra ventana del objeto verDatos y posteriormente se cierra el proceso del objeto sr con el metodo Close().
             verDatos.ShowDialog();
+            sr.Close();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -107,15 +115,20 @@ namespace PROG2EVA1juanrosas
             string[] r;
             string texto;
             lectura = sr.ReadToEnd();
-            r = lectura.Split(' ');
+            r = lectura.Split(';');
             texto = "";
             for (int i = 0; i < r.Length; i++)
             {
+                //se utliza el metodo Contains() para saber si el array mantienen en la posicion i el rut consultado.
                 if (r[i].Contains(txtRut.Text))
                 {
                     texto += $"{r[i]} \n";
                 }
             }
+            VerDatos verDatos = new VerDatos(texto);
+            verDatos.ShowDialog();
+
+            sr.Close();
         }
     }
 }
