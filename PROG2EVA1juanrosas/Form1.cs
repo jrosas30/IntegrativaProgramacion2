@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,6 @@ namespace PROG2EVA1juanrosas
         }
 
         string[] ultimosJugadores = new string[10]; //Arreglo de ultimos 10 jugadores
-        List<CLASEEVALUA2juanRosas> lista;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -31,23 +31,25 @@ namespace PROG2EVA1juanrosas
             rutValido.Rut = rut;
             string devuelveRut = rutValido.Rut.ToString();
             string nivel = comboBox1.Text;
+            FormBuscaminas buscaminas;
 
+            
             //validaciones de rut y nivel
             if (rutValido.Rut == "correcto" && nivel == "Facil")
             {
-                FormBuscaminas buscaminas = new FormBuscaminas(10);
+                buscaminas = new FormBuscaminas(10, rut, DateTime.Now);
                 buscaminas.ShowDialog();
                 GuardarJugador(nombre);
             }
             else if (rutValido.Rut == "correcto" && nivel == "Medio")
             {
-                FormBuscaminas buscaminas = new FormBuscaminas(15);
+                buscaminas = new FormBuscaminas(15, rut, DateTime.Now);
                 buscaminas.ShowDialog();
                 GuardarJugador(nombre);
             }
             else if (rutValido.Rut == "correcto" && nivel == "Dificil")
             {
-                FormBuscaminas buscaminas = new FormBuscaminas(20);
+                buscaminas = new FormBuscaminas(20, rut, DateTime.Now);
                 buscaminas.ShowDialog();
                 GuardarJugador(nombre);
             }
@@ -80,6 +82,40 @@ namespace PROG2EVA1juanrosas
 
         }
 
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            StreamReader sr = new StreamReader(@"C:\TXTS\VIGIAJUANROSAS.TXT");
+            string lectura;
+            string[] r;
+            string texto;
+            lectura = sr.ReadToEnd();
+            r = lectura.Split(';');
+            texto = "";
+            for (int i = 0; i < r.Length; i++)
+            {
+                texto += $"{r[i]} \n";
+            }
 
+            VerDatos verDatos = new VerDatos(texto);
+            verDatos.ShowDialog();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            StreamReader sr = new StreamReader(@"C:\TXTS\VIGIAJUANROSAS.TXT");
+            string lectura;
+            string[] r;
+            string texto;
+            lectura = sr.ReadToEnd();
+            r = lectura.Split(' ');
+            texto = "";
+            for (int i = 0; i < r.Length; i++)
+            {
+                if (r[i].Contains(txtRut.Text))
+                {
+                    texto += $"{r[i]} \n";
+                }
+            }
+        }
     }
 }

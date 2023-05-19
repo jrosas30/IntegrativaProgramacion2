@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PROG2EVA1juanrosas.exe" size="117728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PROG2EVA1juanrosas.exe" size="121824">
       <assemblyIdentity name="PROG2EVA1juanrosas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>I/QLR3F4q21E/51OvmlWyoQwnGEsZsx/NVzvhxjyH3o=</dsig:DigestValue>
+        <dsig:DigestValue>+e6gWw5p5VdqQ2nvRF6Ix+3TcaLnqmSwcB23JyYeqrU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

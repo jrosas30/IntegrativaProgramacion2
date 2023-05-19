@@ -14,3 +14,4 @@ C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\bin\Debug\PROG
 C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\bin\Debug\PROG2EVA1juanrosas.application
 C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.exe.manifest
 C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.application
+C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.VerDatos.resources

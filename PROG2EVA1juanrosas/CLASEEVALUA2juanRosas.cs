@@ -14,10 +14,18 @@ namespace PROG2EVA1juanrosas
         private string Accion;
         private DateTime AccionF;
 
-        public CLASEEVALUA2juanRosas(string rut, DateTime inicioSesion)
+        public CLASEEVALUA2juanRosas()
         {
-            Rut = rut;
-            InicioSesion = inicioSesion;
+
+        }
+
+        public CLASEEVALUA2juanRosas(string Rut, DateTime InicioSesion, DateTime FinSesion, string Accion, DateTime AccionF)
+        {
+            this.Rut = Rut;
+            this.InicioSesion = InicioSesion;
+            this.FinSesion = FinSesion;
+            this.Accion = Accion;
+            this.AccionF = AccionF;
         }
 
         public void setRut(string Rut)
