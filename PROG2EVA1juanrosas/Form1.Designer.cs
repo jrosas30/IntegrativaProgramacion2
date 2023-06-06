@@ -44,6 +44,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.SuspendLayout();
             // 
             // button1
@@ -186,6 +187,10 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
             // Form1
             // 
             this.AccessibleDescription = "";
@@ -232,6 +237,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }
 

@@ -22,6 +22,7 @@ namespace PROG2EVA1juanrosas
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             string nombre = txtNombre.Text;
             string rut = txtRut.Text;
             
