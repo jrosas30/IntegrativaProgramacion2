@@ -145,7 +145,7 @@ namespace PROG2EVA1juanrosas
                 {
                     picBox.BackColor = Color.White;
                     LISTAEVALUA2.Add(new CLASEEVALUA2juanRosas(rut, inicio, DateTime.Now, "Se abrio una celda en blanco", DateTime.Now));
-                    LimpiarCeldasSinMinas(picBox);
+                    //LimpiarCeldasSinMinas(picBox);
                 }
             }
             else
@@ -179,24 +179,24 @@ namespace PROG2EVA1juanrosas
         }
 
 
-        public void LimpiarCeldasSinMinas(PictureBox picBox)
-        {
-            int x = picBox.Location.X / 40;
-            int y = picBox.Location.Y / 40;
+        //public void LimpiarCeldasSinMinas(PictureBox picBox)
+        //{
+        //    int x = picBox.Location.X / 40;
+        //    int y = picBox.Location.Y / 40;
 
-            for (int i = Math.Max(0, x - 1); i <= Math.Min(n - 1, x + 1); i++)
-            {
-                for (int j = Math.Max(0, y - 1); j <= Math.Min(n - 1, y + 1); j++)
-                {
-                    PictureBox currentBox = matriz[i, j];
-                    if (currentBox.BackColor != Color.White && currentBox.Tag.ToString() == "0")
-                    {
-                        currentBox.BackColor = Color.White;
-                        LimpiarCeldasSinMinas(currentBox);
-                    }
-                }
-            }
-        }
+        //    for (int i = Math.Max(0, x - 1); i <= Math.Min(n - 1, x + 1); i++)
+        //    {
+        //        for (int j = Math.Max(0, y - 1); j <= Math.Min(n - 1, y + 1); j++)
+        //        {
+        //            PictureBox currentBox = matriz[i, j];
+        //            if (currentBox.BackColor != Color.White && currentBox.Tag.ToString() == "0")
+        //            {
+        //                currentBox.BackColor = Color.White;
+        //                LimpiarCeldasSinMinas(currentBox);
+        //            }
+        //        }
+        //    }
+        //}
 
 
         //public void ReiniciarJuego()
