@@ -1,6 +1,5 @@
 C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.csproj.AssemblyReference.cache
 C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.csproj.SuggestedBindingRedirects.cache
-C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.Form1.resources
 C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.Properties.Resources.resources
 C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.csproj.GenerateResource.cache
 C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.csproj.CoreCompileInputs.cache
@@ -9,9 +8,13 @@ C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\bin\Debug\PROG
 C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\bin\Debug\PROG2EVA1juanrosas.pdb
 C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.exe
 C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.pdb
-C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.FormBuscaminas.resources
 C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\bin\Debug\PROG2EVA1juanrosas.exe.manifest
 C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\bin\Debug\PROG2EVA1juanrosas.application
 C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.exe.manifest
 C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.application
+C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\bin\Debug\BDDPROG2juanrosas.mdf
+C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\bin\Debug\BDDPROG2juanrosas_log.ldf
+C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.Form1.resources
+C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.FormBuscaminas.resources
+C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.PERFILES.resources
 C:\Users\dreik\source\repos\PROG2EVA1juanrosas\PROG2EVA1juanrosas\obj\Debug\PROG2EVA1juanrosas.VerDatos.resources

@@ -16,16 +16,27 @@ namespace PROG2EVA1juanrosas
         public Form1()
         {
             InitializeComponent();
+
         }
 
         string[] ultimosJugadores = new string[10]; //Arreglo de ultimos 10 jugadores
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             string nombre = txtNombre.Text;
+            string apellidoPat = txtApellido1.Text;
+            string apellidoMat = txtApellido2.Text;
             string rut = txtRut.Text;
-            
+            string contra = txtContra.Text;
+
+            // Verificar si los campos están vacíos
+            if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(apellidoPat) ||
+                string.IsNullOrWhiteSpace(apellidoMat) || string.IsNullOrWhiteSpace(rut) || string.IsNullOrEmpty(contra))
+            {
+                MessageBox.Show("Debe ingresar todos los campos.", "Error");
+                return; // Salir del método sin iniciar el juego
+            }
+
             //instancia de la clase ValidacionRut 
             ValidacionRut rutValido = new ValidacionRut();
 
@@ -130,6 +141,30 @@ namespace PROG2EVA1juanrosas
             verDatos.ShowDialog();
 
             sr.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            string rut = txtRut.Text;
+
+            //instancia de la clase ValidacionRut 
+            ValidacionRut rutValido = new ValidacionRut();
+
+            rutValido.Rut = rut;
+            string devuelveRut = rutValido.Rut.ToString();
+
+            //validaciones de rut y nivel
+            if (rutValido.Rut == "correcto")
+            {
+                PERFILES formPerfiles = new PERFILES();
+                formPerfiles.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show(devuelveRut, "ERROR");
+            }        
+        
         }
     }
 }

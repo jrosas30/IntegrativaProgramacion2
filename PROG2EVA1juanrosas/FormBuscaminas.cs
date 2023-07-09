@@ -152,7 +152,7 @@ namespace PROG2EVA1juanrosas
             {
                 picBox.Image = Properties.Resources.minas;
                 MessageBox.Show("¡Perdiste! Haz clic en 'Aceptar'");
-                LISTAEVALUA2.Add(new CLASEEVALUA2juanRosas(rut, inicio, DateTime.Now, "Se terminó el juego, perdiste", DateTime.Now));
+                LISTAEVALUA2.Add(new CLASEEVALUA2juanRosas(rut, inicio, DateTime.Now, "Perdiste", DateTime.Now));
                 //ReiniciarJuego();
             }
 
@@ -177,32 +177,6 @@ namespace PROG2EVA1juanrosas
             return contador;
 
         }
-
-
-        //public void LimpiarCeldasSinMinas(PictureBox picBox)
-        //{
-        //    int x = picBox.Location.X / 40;
-        //    int y = picBox.Location.Y / 40;
-
-        //    for (int i = Math.Max(0, x - 1); i <= Math.Min(n - 1, x + 1); i++)
-        //    {
-        //        for (int j = Math.Max(0, y - 1); j <= Math.Min(n - 1, y + 1); j++)
-        //        {
-        //            PictureBox currentBox = matriz[i, j];
-        //            if (currentBox.BackColor != Color.White && currentBox.Tag.ToString() == "0")
-        //            {
-        //                currentBox.BackColor = Color.White;
-        //                LimpiarCeldasSinMinas(currentBox);
-        //            }
-        //        }
-        //    }
-        //}
-
-
-        //public void ReiniciarJuego()
-        //{
-        //    this.Close();
-        //}
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {

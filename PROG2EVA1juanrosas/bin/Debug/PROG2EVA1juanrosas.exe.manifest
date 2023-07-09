@@ -42,17 +42,35 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PROG2EVA1juanrosas.exe" size="122336">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PROG2EVA1juanrosas.exe" size="132576">
       <assemblyIdentity name="PROG2EVA1juanrosas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>EvqkQEiY6SsBHVeVcAwJMcRUFDDZ1KgvJPNXpAXget8=</dsig:DigestValue>
+        <dsig:DigestValue>LhOz/SswJLoGlhyiEtbvQ4rDk3IDH33c+L1YiwefBKQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="BDDPROG2juanrosas.mdf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+D+ojjmrWnZv5jAyaVy1+YekIiImEd9jipD4LeISJGA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="BDDPROG2juanrosas_log.ldf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RnrA44pkRtZzey/8ZflKYf6WqJYpKoVzI4PLBpvluZY=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="PROG2EVA1juanrosas.exe.config" size="189">
     <hash>
       <dsig:Transforms>
