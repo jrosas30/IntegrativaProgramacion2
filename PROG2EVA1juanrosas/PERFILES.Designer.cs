@@ -37,8 +37,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApPat = new System.Windows.Forms.TextBox();
             this.txtApMat = new System.Windows.Forms.TextBox();
-            this.txtNivel = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAlmacenar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -48,6 +47,10 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.txtClave = new System.Windows.Forms.TextBox();
+            this.lblClave = new System.Windows.Forms.Label();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +94,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 140);
+            this.label5.Location = new System.Drawing.Point(35, 137);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 4;
@@ -125,22 +128,15 @@
             this.txtApMat.Size = new System.Drawing.Size(163, 20);
             this.txtApMat.TabIndex = 8;
             // 
-            // txtNivel
+            // btnAlmacenar
             // 
-            this.txtNivel.Location = new System.Drawing.Point(163, 137);
-            this.txtNivel.Name = "txtNivel";
-            this.txtNivel.Size = new System.Drawing.Size(163, 20);
-            this.txtNivel.TabIndex = 9;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(357, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 43);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "ALMACENAR DATOS";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAlmacenar.Location = new System.Drawing.Point(357, 19);
+            this.btnAlmacenar.Name = "btnAlmacenar";
+            this.btnAlmacenar.Size = new System.Drawing.Size(93, 43);
+            this.btnAlmacenar.TabIndex = 10;
+            this.btnAlmacenar.Text = "ALMACENAR DATOS";
+            this.btnAlmacenar.UseVisualStyleBackColor = true;
+            this.btnAlmacenar.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -154,7 +150,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(357, 68);
+            this.button3.Location = new System.Drawing.Point(456, 68);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 43);
             this.button3.TabIndex = 12;
@@ -164,7 +160,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(456, 68);
+            this.button4.Location = new System.Drawing.Point(357, 117);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(93, 43);
             this.button4.TabIndex = 13;
@@ -174,7 +170,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(409, 117);
+            this.button5.Location = new System.Drawing.Point(456, 117);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(93, 43);
             this.button5.TabIndex = 14;
@@ -193,7 +189,7 @@
             // lblSentencia
             // 
             this.lblSentencia.AutoSize = true;
-            this.lblSentencia.Location = new System.Drawing.Point(35, 210);
+            this.lblSentencia.Location = new System.Drawing.Point(35, 235);
             this.lblSentencia.Name = "lblSentencia";
             this.lblSentencia.Size = new System.Drawing.Size(0, 13);
             this.lblSentencia.TabIndex = 16;
@@ -209,7 +205,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(90, 170);
+            this.button6.Location = new System.Drawing.Point(90, 195);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(192, 23);
             this.button6.TabIndex = 18;
@@ -219,7 +215,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(348, 170);
+            this.button7.Location = new System.Drawing.Point(348, 195);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(192, 23);
             this.button7.TabIndex = 19;
@@ -227,11 +223,52 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // txtClave
+            // 
+            this.txtClave.Location = new System.Drawing.Point(163, 162);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.Size = new System.Drawing.Size(163, 20);
+            this.txtClave.TabIndex = 21;
+            // 
+            // lblClave
+            // 
+            this.lblClave.AutoSize = true;
+            this.lblClave.Location = new System.Drawing.Point(35, 165);
+            this.lblClave.Name = "lblClave";
+            this.lblClave.Size = new System.Drawing.Size(41, 13);
+            this.lblClave.TabIndex = 20;
+            this.lblClave.Text = "CLAVE";
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(357, 68);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(93, 43);
+            this.btnEditar.TabIndex = 22;
+            this.btnEditar.Text = "EDITAR REGISTROS";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.comboBox1.Location = new System.Drawing.Point(163, 135);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(163, 21);
+            this.comboBox1.TabIndex = 23;
+            // 
             // PERFILES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 454);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.txtClave);
+            this.Controls.Add(this.lblClave);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.dataGridView2);
@@ -241,8 +278,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtNivel);
+            this.Controls.Add(this.btnAlmacenar);
             this.Controls.Add(this.txtApMat);
             this.Controls.Add(this.txtApPat);
             this.Controls.Add(this.txtNombre);
@@ -273,8 +309,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApPat;
         private System.Windows.Forms.TextBox txtApMat;
-        private System.Windows.Forms.TextBox txtNivel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAlmacenar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
@@ -284,5 +319,9 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox txtClave;
+        private System.Windows.Forms.Label lblClave;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,59 +25,58 @@ namespace PROG2EVA1juanrosas
         private void button1_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;
-            string apellidoPat = txtApellido1.Text;
-            string apellidoMat = txtApellido2.Text;
             string rut = txtRut.Text;
-            string contra = txtContra.Text;
+            string clave = txtContra.Text;
 
             // Verificar si los campos están vacíos
-            if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(apellidoPat) ||
-                string.IsNullOrWhiteSpace(apellidoMat) || string.IsNullOrWhiteSpace(rut) || string.IsNullOrEmpty(contra))
+            if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(rut) || string.IsNullOrEmpty(clave))
             {
-                MessageBox.Show("Debe ingresar todos los campos.", "Error");
-                return; // Salir del método sin iniciar el juego
-            }
-
-            //instancia de la clase ValidacionRut 
-            ValidacionRut rutValido = new ValidacionRut();
-
-            rutValido.Rut = rut;
-            string devuelveRut = rutValido.Rut.ToString();
-            string nivel = comboBox1.Text;
-            FormBuscaminas buscaminas;
-
-            
-            //validaciones de rut y nivel
-            if (rutValido.Rut == "correcto" && nivel == "Facil")
-            {
-                buscaminas = new FormBuscaminas(10, rut, DateTime.Now);
-                buscaminas.ShowDialog();
-                GuardarJugador(nombre);
-            }
-            else if (rutValido.Rut == "correcto" && nivel == "Medio")
-            {
-                buscaminas = new FormBuscaminas(15, rut, DateTime.Now);
-                buscaminas.ShowDialog();
-                GuardarJugador(nombre);
-            }
-            else if (rutValido.Rut == "correcto" && nivel == "Dificil")
-            {
-                buscaminas = new FormBuscaminas(20, rut, DateTime.Now);
-                buscaminas.ShowDialog();
-                GuardarJugador(nombre);
+                MessageBox.Show("Debe rellenar todos los campos.", "Error");
             }
             else
-            {   
-                MessageBox.Show(devuelveRut, "ERROR");
-            }
-
-            //muestra ultimos 10 jugadores del arreglo
-            string jugadores = "";
-            for (int i = 0; i < ultimosJugadores.Length; i++)
             {
-                jugadores += ultimosJugadores[i] + "\n";
+                //instancia de la clase ValidacionRut 
+                ValidacionRut rutValido = new ValidacionRut();
+
+                rutValido.Rut = rut;
+                string devuelveRut = rutValido.Rut.ToString();
+                string nivel = comboBox1.Text;
+                FormBuscaminas buscaminas;
+
+
+                //validaciones de rut y nivel
+                if (rutValido.Rut == "correcto" && nivel == "Facil")
+                {
+                    buscaminas = new FormBuscaminas(10, rut, DateTime.Now);
+                    buscaminas.ShowDialog();
+                    GuardarJugador(nombre);
+                }
+                else if (rutValido.Rut == "correcto" && nivel == "Medio")
+                {
+                    buscaminas = new FormBuscaminas(15, rut, DateTime.Now);
+                    buscaminas.ShowDialog();
+                    GuardarJugador(nombre);
+                }
+                else if (rutValido.Rut == "correcto" && nivel == "Dificil")
+                {
+                    buscaminas = new FormBuscaminas(20, rut, DateTime.Now);
+                    buscaminas.ShowDialog();
+                    GuardarJugador(nombre);
+                }
+                else
+                {
+                    MessageBox.Show(devuelveRut, "ERROR");
+                }
+
+                //muestra ultimos 10 jugadores del arreglo
+                string jugadores = "";
+                for (int i = 0; i < ultimosJugadores.Length; i++)
+                {
+                    jugadores += ultimosJugadores[i] + "\n";
+                }
+                lblRes.Text = jugadores;
             }
-            lblRes.Text = jugadores;
+            
         }
 
         //metodo para guardar jugador
@@ -145,26 +145,57 @@ namespace PROG2EVA1juanrosas
 
         private void button2_Click(object sender, EventArgs e)
         {
-
             string rut = txtRut.Text;
+            string clave = txtContra.Text;
 
-            //instancia de la clase ValidacionRut 
-            ValidacionRut rutValido = new ValidacionRut();
-
-            rutValido.Rut = rut;
-            string devuelveRut = rutValido.Rut.ToString();
-
-            //validaciones de rut y nivel
-            if (rutValido.Rut == "correcto")
+            if (string.IsNullOrWhiteSpace(rut) || string.IsNullOrWhiteSpace(clave))
             {
-                PERFILES formPerfiles = new PERFILES();
-                formPerfiles.ShowDialog();
+                MessageBox.Show("Debe ingresar el rut y la clave.", "Error");
             }
             else
             {
-                MessageBox.Show(devuelveRut, "ERROR");
-            }        
-        
+                string conexion = "Server=127.0.0.1;User=root;Database=programacion;password=''";
+                MySqlConnection con = new MySqlConnection(conexion);
+                con.Open();
+
+                DataTable datos = new DataTable();
+                string devueveRut = "select * from PERFILESjuanrosas";
+                string devueveClave = "select * from PERFILESjuanrosas";
+
+                //instancia de la clase ValidacionRut 
+                ValidacionRut rutValido = new ValidacionRut();
+
+                rutValido.Rut = rut;
+                string devuelveRut = rutValido.Rut.ToString();
+
+                //validaciones de rut y nivel
+                if (rutValido.Rut == "correcto")
+                {
+                    PERFILES formPerfiles = new PERFILES();
+                    formPerfiles.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show(devuelveRut, "ERROR");
+                }
+                con.Close();
+            }
+
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormCreditos formCreditos = new FormCreditos();
+            formCreditos.ShowDialog();
+        }
+
+        private void btnMostrarAcciones_Click(object sender, EventArgs e)
+        {
+            string rut = txtRut.Text;
+            string clave = txtContra.Text;
+            FormAcciones formAcciones = new FormAcciones();
+            formAcciones.ShowDialog();
         }
     }
 }

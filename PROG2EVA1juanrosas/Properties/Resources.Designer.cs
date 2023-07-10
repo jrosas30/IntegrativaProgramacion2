@@ -103,6 +103,16 @@ namespace PROG2EVA1juanrosas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap LOGO_INSTITUTO {
+            get {
+                object obj = ResourceManager.GetObject("LOGO INSTITUTO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap minas {
             get {
                 object obj = ResourceManager.GetObject("minas", resourceCulture);
